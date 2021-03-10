@@ -1,12 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- hoja de estilos normalice para que todos los navegadores muestren estilos similares -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="css/normalice.css">
+    <!-- fuentes google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <!-- hoja de estilos personalizada de la pagina (estilos globales de la pagina) -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="css/stylos.css">
+    <title>Tienda Virtual</title>
 </head>
 <body>
+    <!-- creamos la cabecera de la pagina la cual contendra el logo con un enlace para que siempre redirecione al inicio  -->
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="logotipo">
+        </a>
+    </header>
+    <!-- creamos la navegacion -->
+    <nav class="navegacion">
+        <!-- agregamos un modificador para cambiar la apariencia de los enlaces seleccionados  (navegacion__enlace--activo)-->
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">tienda</a>
+        <a class="navegacion__enlace " href="nosotros.html">nosotros</a>
+    </nav>
+    <!-- creamos el contenedor de la pagina -->
+    
+    <main class="contenedor">
+        <h1>Nuestros Productos</h1>
+        <!-- creamos el contenedor para las secciones de productos -->
+        <div class="grid">
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/1.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">Vuejs</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto-->
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/2.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">AngularJs</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto-->
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/3.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">reactjs</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto--> 
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/4.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">redux</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto--> 
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/5.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">node</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto--> 
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/6.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">sass</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto--> 
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/7.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">HTML5</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto--> 
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/8.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">github</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto--> 
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/9.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">bulmacss</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto--> 
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/10.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">typescript</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto--> 
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/11.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">drupal</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto--> 
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/12.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">javascript</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto--> 
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/13.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">graphql</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto--> 
+                <div class="producto">
+                    <!-- creamos un enlace a la pagina de productos  -->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/14.jpg" alt="imagen camisa">
+                        <div class="producto__informacion">
+                            <p class="producto__nombre">wordpress</p>
+                            <p class="producto__precio">$25</p>
+
+                        </div>
+                    </a>
+                </div> 
+                <!--producto--> 
+                <div class="grafico grafico--camisas"></div>
+                <div class="grafico grafico--node"></div>
+
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto"> todos los derechos reservados carlos orellana 2022</p>
+    </footer>
+
+
     
 </body>
+
 </html>

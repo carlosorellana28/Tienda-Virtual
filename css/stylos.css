@@ -1,0 +1,253 @@
+/* creamos el root para declarar propiedades o variables con los valores especificados */
+:root{
+    
+    /* propiedad para las fuentes que utilñizaremos en la pagian */
+
+    --fuentes-principal:'Staatliches', cursive;
+
+    /* creando las propiedades para los colores que utilizaremos */
+
+    --primario:#9C27B0;
+    --primario-oscuro:#89119D;
+    --secundario:#ffce00;
+    --secundario-oscuro: rgb(233,187,2);
+    --blanco:#fff;
+    --negro:#000;
+    /* definiendo varriables para los tamaños de letras */
+    --fuente-grande: 4rem;
+    --fuente-mediana:3.2rem;
+    --fuente-pequeña:2.4rem;
+
+}
+
+/* codigo para que los contenedores tomen el valos conjunto los margenes y padding */
+html{
+    box-sizing: border-box;
+    /* poner la fuente a un tamaño especifico ara luego utilizarla mediante rem */
+    font-size: 62.5%;
+    
+}
+/* selectores universales */
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+/* DEFINIENDO LOS ESTILOS GLOBALES */
+/* definiendo los parametros del body */
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+/* definimos los parametros de los parrafos */
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif; /*declaramos fuentes por defecto para que se visualicen en cualquier navegador*/
+    color: var(--blanco);
+
+}
+/* difiniendo los estylos de los enlaces */
+a{
+    text-decoration: none;
+
+}
+img{
+    width: 100%;
+
+}
+/* definismos los valores del contenedor em los globales */
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+/* valores para los heading */
+h1,h2,h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentes-principal);
+
+}
+/* definimos loa valores para los tutulos desde el h2hasta el h3 */
+h1{ font-size: var(--fuente-grande);}
+h2{font-size: var(--fuente-mediana);}
+h3{font-size: var(--fuente-pequeña);}
+
+/* cabecera de la pagina */
+.header{
+    display:flex ;
+    justify-content: center;
+
+}
+.header__logo{
+    margin: 3rem 0;
+}
+
+/* creamos el diseño de la navegacion */
+
+.navegacion{
+    background-color: var(--primario-oscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.navegacion__enlace{
+    font-family: var(--fuentes-principal);
+    color: var(--blanco);
+    font-size: var(--fuente-mediana);
+}
+/* agregamos una pseudo clase hover conjunto con el modificador de la clase para cambiar la apariencia */
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color: var(--secundario);
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+@media (max-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.producto{
+    background-color: var(--primario-oscuro);
+    padding: 1rem;
+}
+.producto__imagen{
+    width: 100%;
+}
+.producto__nombre,.producto__precio{
+    text-align: center;
+    margin: 1rem auto;
+    font-family: var(--fuentes-principal);
+    line-height: 1.2;
+
+}
+.producto__nombre{
+    font-size: var(--fuente-grande);
+}
+.producto__precio{
+    font-size: var(--fuente-mediana);
+    color: var(--secundario);
+}
+/* graficos de  la pagina(fotos grandes) */
+
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size:cover ;
+
+}
+.grafico--camisas{
+    grid-row: 2/3;
+    grid-column: 1/3;
+    background-image: url(../img/grafico1.jpg);
+   
+    
+}
+
+.grafico--node{
+    grid-row:5/6;
+    grid-column:2/4;
+    background-image: url(../img/grafico2.jpg);
+    
+    
+}
+@media (max-width: 768px) {
+    .grafico--node{
+        grid-row:8/9;
+        grid-column: 1/3;
+    }
+}
+.footer{
+    background-color: var(--primario-oscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__texto{
+    text-align: center;
+    font-size: 2.2rem;
+    font-family: var(--fuentes-principal);
+}
+/* diseño de la pagina nosotros */
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+} 
+@media (min-width: 768px) {
+    .nosotros{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap:2rem ;
+       
+    }
+}
+ .nosotros__contenido{
+    text-align: justify;
+    padding: 2rem;
+
+}
+.nosotros__imagen{
+    grid-row: 1/2;
+    width: 100%;
+}
+@media (min-width: 768px ) {
+    .nosotros__imagen{
+        grid-column: 2/3;
+    }
+}
+/* bloques de compras */
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+        .bloques{
+            grid-template-columns: repeat(2, 1fr);
+        }
+}
+.bloque{
+    text-align: center;
+}
+
+/* pagina de productos */
+/* agregamos un media para que se vea en grid cuando pase de los 768px */
+@media (min-width: 768px) {
+    .camisa{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    }
+}
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+}
+.formulario__campo{
+    border: 1rem solid var(--primario-oscuro);
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--negro);
+    font-weight: 700;
+    padding: 1rem;
+
+}
+.formulario__submit{
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentes-principal);
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1/3;
+
+}
+.formulario__submit:hover{
+    background-color: var(--secundario-oscuro);
+}
+
+

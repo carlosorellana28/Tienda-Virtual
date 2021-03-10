@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- hoja de estilos normalice para que todos los navegadores muestren estilos similares -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="css/normalice.css">
+    <!-- fuentes google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <!-- hoja de estilos personalizada de la pagina (estilos globales de la pagina) -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="css/stylos.css">
+    <title>Tienda Virtual</title>
+</head>
+<body>
+    <!-- creamos la cabecera de la pagina la cual contendra el logo con un enlace para que siempre redirecione al inicio  -->
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="img/logo.png" alt="logotipo">
+        </a>
+    </header>
+    <!-- creamos la navegacion -->
+    <nav class="navegacion">
+        <!-- agregamos un modificador para cambiar la apariencia de los enlaces seleccionados  (navegacion__enlace--activo)-->
+        <a class="navegacion__enlace " href="index.html">tienda</a>
+        <a class="navegacion__enlace" href="nosotros.html">nosotros</a>
+    </nav>
+
+    <main class="contenedor">
+        <h2>reactjs</h2>    
+        <div class="camisa">
+            <img src="img/3.jpg" alt=" imagen del producto" class="camisa__imagen">
+            <div class="camisa__contenido">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, porro odio quod distinctio ullam, iusto delectus error sequi ipsum veniam, voluptatum libero. Itaque iusto consequatur quia perferendis autem repellat beatae?</p>
+                
+                <!-- formulario para llenar el pedido de las camisas -->
+                <form action="" class="formulario">
+                    <!-- agregamos una etiqueta que nos sirve para seleccionar una talla esta a su vez tiene otas etiquetas dentro donde va cada item -->
+                    <select class="formulario__campo">
+                        <!-- items de la etiqueta selected -->
+                        <!-- agregamos un option para que aparezca al inicio como placeholder el primer atributo nos sirve para desactivar la opcion el segundo para que se pueda seleccionar una vez -->
+                        <option disabled selected> seleccionar talla</option>
+                        <option >chica</option>
+                        <option >mediana</option>
+                        <option >grande</option>
+                    </select>
+                    <input type="number" class="formulario__campo" placeholder="cantidad" min="1" >
+                    <input type="submit" class="formulario__submit" value="agregar al carrito">
+                </form>
+            </div>
+        </div>
+    </main>
+    
+
+    <footer class="footer">
+        <p class="footer__texto"> todos los derechos reservados carlos orellana 2022</p>
+    </footer>
+
+
+    
+</body>
+
+</html>
